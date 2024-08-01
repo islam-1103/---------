@@ -1,0 +1,51 @@
+.footer {
+    background-color: $bg-dark-blue-200;
+    padding: 50px;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+    }
+
+    &__copyright,
+    &__confidencial {
+        @include text(15px, 400, 17px);
+        color: $text-gray;
+    }
+
+    &__confidencial {
+        text-decoration: underline;
+    }
+
+    .nav {
+        @include tablet {
+            &__list {
+                gap: 15px;
+            }
+
+            &__link {
+                @include text(13px, 700, 16px);
+            } 
+        }
+
+
+        @include mobile {
+            display: flex;
+            text-align: center;
+
+            &__list {
+                flex-direction: column;
+            }
+        }
+
+        @include mobile-tablet {
+            order: -1;
+        }
+    }
+
+    .social {
+        order: -2;
+    }
+}
